@@ -1,6 +1,6 @@
 
     // tl.resart();#
-rule = CSSruleplugin.getRule("#eland:after")
+// rule = CSSruleplugin.getRule("#eland:after")
    
 gsap.from('.text1', {x: 100, opacity: 0, duration: 1, ease: "linear"});
 gsap.from('.text2', {x: -100, opacity: 0, duration: 1, ease: "linear"});
