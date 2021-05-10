@@ -1,0 +1,23 @@
+.curtain {
+  -webkit-animation: opacityFx 1s;
+          animation: opacityFx 1s;
+}
+
+@-webkit-keyframes opacityFx {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes opacityFx {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+/*# sourceMappingURL=curtain.css.map */

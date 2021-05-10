@@ -1,0 +1,9 @@
+{
+    "version": 3,
+    "mappings": "AACA,AAAA,QAAQ,CAAC;EACL,SAAS,EAAE,YAAY;CAC1B;;AAGD,UAAU,CAAV,SAAU;EACN,EAAE;IACE,OAAO,EAAE,CAAC;;EAEd,IAAI;IACA,OAAO,EAAE,CAAC",
+    "sources": [
+        "curtain.scss"
+    ],
+    "names": [],
+    "file": "curtain.css"
+}

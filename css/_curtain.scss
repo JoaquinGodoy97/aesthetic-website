@@ -1,0 +1,15 @@
+
+.curtain {
+    animation: opacityFx 8s ease-in-out forwards;
+}
+
+
+@keyframes opacityFx {
+    0%{
+        opacity: 1;
+    }
+    100%{
+        opacity: 0;
+        z-index: 0;
+    }
+}

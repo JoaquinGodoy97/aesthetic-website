@@ -1,0 +1,388 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300&display=swap");
+.curtain {
+  -webkit-animation: opacityFx 8s ease-in-out forwards;
+          animation: opacityFx 8s ease-in-out forwards;
+}
+
+@-webkit-keyframes opacityFx {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+    z-index: 0;
+  }
+}
+
+@keyframes opacityFx {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+    z-index: 0;
+  }
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body {
+  background-color: #161616;
+  width: 100%;
+  height: 200vh;
+}
+
+header {
+  width: 100%;
+}
+
+nav {
+  height: 10vh;
+  background-color: rgba(82, 82, 82, 0);
+  -webkit-box-shadow: 0px 0px 10px 1px rgba(34, 34, 34, 0);
+          box-shadow: 0px 0px 10px 1px rgba(34, 34, 34, 0);
+  width: 100%;
+  position: fixed;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  z-index: 1;
+}
+
+.listWrapper {
+  width: 90%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.logo {
+  padding: 2vh;
+  font-size: 20px;
+  font-weight: bold;
+  color: white;
+}
+
+.navList {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 30%;
+}
+
+.nav-items {
+  text-decoration: none;
+  list-style: none;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 18px;
+  border-radius: 4px;
+  text-align: center;
+  padding: 10px;
+  display: inline-block;
+  border: 1px solid black;
+  -webkit-box-shadow: 5px 1px 6px .3px black;
+          box-shadow: 5px 1px 6px .3px black;
+  cursor: pointer;
+  background-color: rgba(0, 0, 0, 0.3);
+  background-image: -webkit-gradient(linear, left top, left bottom, color-stop(100%, rgba(86, 86, 87, 0.234)), to(black));
+  background-image: linear-gradient(rgba(86, 86, 87, 0.234) 100%, black 100%);
+  background-position: 50% 50%;
+  background-repeat: no-repeat;
+  background-size: 0% 100%;
+  -webkit-transition: background-size .9s ease-in-out;
+  transition: background-size .9s ease-in-out;
+}
+
+.nav-items a {
+  text-decoration: none;
+  color: #5a5a5a;
+  font-weight: bold;
+  -webkit-transition: color .5s;
+  transition: color .5s;
+}
+
+.contact:hover, .nav-items:hover, .nav-items a:hover {
+  font-weight: bold;
+  background-size: 100% 100%;
+  color: #c8c8c8;
+}
+
+.contact {
+  border: 2px solid #2c6091;
+  background-color: #1a1a1a;
+}
+
+.contact a {
+  color: #c8c8c8;
+}
+
+.container {
+  width: 80%;
+  height: 100vh;
+  display: -ms-grid;
+  display: grid;
+  margin: auto;
+  -ms-grid-columns: (1fr)[3];
+      grid-template-columns: repeat(3, 1fr);
+  -ms-grid-rows: 1fr;
+      grid-template-rows: 1fr;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+main {
+  width: 100%;
+  position: relative;
+  overflow: hidden;
+}
+
+#eland {
+  -ms-grid-rows: 2;
+  -ms-grid-columns: 3;
+      grid-template: 2/3;
+  height: 500px;
+  width: 500px;
+  top: 15%;
+  right: 25%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  position: absolute;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.info-container {
+  -ms-grid-row: 1;
+  grid-row: 1/1;
+  -ms-grid-column: 2;
+  -ms-grid-column-span: 2;
+  grid-column: 2/4;
+  height: 18vh;
+  width: 100%;
+  top: 60%;
+  left: 0%;
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  background-color: rgba(0, 0, 0, 0.3);
+  -webkit-box-shadow: 5px 5px 10px 0px #090909;
+          box-shadow: 5px 5px 10px 0px #090909;
+  border-radius: 5px;
+}
+
+.info {
+  margin: 10px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  font-size: 1.5vw;
+}
+
+.text-style {
+  font-family: 'Montserrat', sans-serif;
+  color: white;
+}
+
+.title-text {
+  height: 22vh;
+  width: 100%;
+  position: relative;
+  display: inline-block;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 1;
+  grid-column: 1/2;
+  -ms-grid-row: 1;
+  grid-row: 1/1;
+  top: 10%;
+  color: #c8c8c8;
+  background-color: rgba(0, 0, 0, 0.3);
+  -webkit-transition: -webkit-transform 1s ease-in;
+  transition: -webkit-transform 1s ease-in;
+  transition: transform 1s ease-in;
+  transition: transform 1s ease-in, -webkit-transform 1s ease-in;
+}
+
+.title-text .text1 {
+  position: absolute;
+  top: 0%;
+  -webkit-transform: translateX(0%);
+          transform: translateX(0%);
+  -webkit-transition: -webkit-transform 1s ease-in;
+  transition: -webkit-transform 1s ease-in;
+  transition: transform 1s ease-in;
+  transition: transform 1s ease-in, -webkit-transform 1s ease-in;
+}
+
+.title-text .text2 {
+  position: absolute;
+  bottom: 0%;
+  -webkit-transform: translateX(50%);
+          transform: translateX(50%);
+  -webkit-transition: -webkit-transform 1s ease-in;
+  transition: -webkit-transform 1s ease-in;
+  transition: transform 1s ease-in;
+  transition: transform 1s ease-in, -webkit-transform 1s ease-in;
+}
+
+.text2:hover {
+  -webkit-transform: translateX(-100%);
+          transform: translateX(-100%);
+}
+
+.text1:hover {
+  -webkit-transform: translateX(150%);
+          transform: translateX(150%);
+}
+
+.inside-title {
+  font-size: 5vh;
+}
+
+h2 {
+  margin-bottom: 10px;
+  color: #5a5a5a;
+}
+
+p {
+  font-weight: 200;
+  text-align: center;
+}
+
+#arrow {
+  -ms-grid-row: 1;
+  grid-row: 1/1;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 2;
+  grid-column: 1/3;
+  top: 40%;
+  height: 100px;
+  width: 100px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  position: relative;
+  -webkit-transform: scale(0, 0);
+          transform: scale(0, 0);
+  -webkit-transform: rotate(90deg);
+          transform: rotate(90deg);
+  cursor: pointer;
+}
+
+#unnamed {
+  height: 200px;
+  width: 200px;
+  left: 80%;
+  bottom: 90%;
+  position: absolute;
+  opacity: 0.2;
+  -webkit-transform: rotate(70deg) scale(2.5);
+          transform: rotate(70deg) scale(2.5);
+}
+
+.second-section {
+  background-color: blanchedalmond;
+  height: 100vh;
+  scroll-behavior: smooth;
+}
+
+.bloc-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 100vh;
+}
+
+.bloc {
+  background-color: #525252;
+  height: 40vh;
+  width: 300px;
+  margin: 10px;
+}
+
+.nav-items:hover {
+  -webkit-animation-name: navItemsHovering;
+          animation-name: navItemsHovering;
+  -webkit-animation-duration: .2s;
+          animation-duration: .2s;
+  -webkit-animation-timing-function: ease;
+          animation-timing-function: ease;
+}
+
+@-webkit-keyframes navHide {
+  from {
+    background-color: #1a1a1a;
+  }
+  to {
+    background-color: rgba(82, 82, 82, 0.604);
+  }
+}
+
+@keyframes navHide {
+  from {
+    background-color: #1a1a1a;
+  }
+  to {
+    background-color: rgba(82, 82, 82, 0.604);
+  }
+}
+
+@-webkit-keyframes titleEffect {
+  from {
+  }
+  to {
+  }
+}
+
+@keyframes titleEffect {
+  from {
+  }
+  to {
+  }
+}
+/*# sourceMappingURL=style.css.map */
