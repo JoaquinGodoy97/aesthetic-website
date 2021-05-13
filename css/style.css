@@ -90,14 +90,13 @@ nav {
   text-decoration: none;
   list-style: none;
   font-family: 'Montserrat', sans-serif;
-  font-size: 18px;
   border-radius: 4px;
   text-align: center;
   padding: 10px;
   display: inline-block;
   border: 1px solid black;
-  -webkit-box-shadow: 5px 1px 6px .3px black;
-          box-shadow: 5px 1px 6px .3px black;
+  -webkit-box-shadow: 5px 1px 10px 0.2px rgba(26, 26, 26, 0.563);
+          box-shadow: 5px 1px 10px 0.2px rgba(26, 26, 26, 0.563);
   cursor: pointer;
   background-color: rgba(0, 0, 0, 0.3);
   background-image: -webkit-gradient(linear, left top, left bottom, color-stop(100%, rgba(86, 86, 87, 0.234)), to(black));
@@ -110,6 +109,8 @@ nav {
 }
 
 .nav-items a {
+  font-size: 1.2vw;
+  margin: auto;
   text-decoration: none;
   color: #5a5a5a;
   font-weight: bold;
@@ -242,13 +243,27 @@ main {
   top: 0%;
   -webkit-transform: translateX(0%);
           transform: translateX(0%);
+  opacity: 0;
 }
 
 .title-text .text2 {
+  opacity: 0;
   position: absolute;
   bottom: 0%;
   -webkit-transform: translateX(50%);
           transform: translateX(50%);
+}
+
+.title-text .text3 {
+  position: absolute;
+  opacity: 0;
+  top: 0%;
+}
+
+.title-text .text4 {
+  opacity: 0;
+  position: absolute;
+  bottom: 0%;
 }
 
 .inside-title {
@@ -346,20 +361,6 @@ p {
   }
   to {
     background-color: rgba(82, 82, 82, 0.604);
-  }
-}
-
-@-webkit-keyframes titleEffect {
-  from {
-  }
-  to {
-  }
-}
-
-@keyframes titleEffect {
-  from {
-  }
-  to {
   }
 }
 /*# sourceMappingURL=style.css.map */
