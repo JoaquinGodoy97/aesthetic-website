@@ -52,7 +52,11 @@ function smoothScroll(target, duration) {
 
 
 var about = document.querySelector('.about');
+var home = document.querySelector('.home');
 
 about.addEventListener('click', function(){
         smoothScroll('.second-section', 1000);
+});
+home.addEventListener('click', function(){
+        smoothScroll('.container', 1000);
 });
