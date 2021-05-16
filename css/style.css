@@ -118,7 +118,7 @@ nav {
   font-weight: bold;
   -webkit-transition: color .5s;
   transition: color .5s;
-  padding: 20px 20px 20px 20px;
+  padding: 20px 10px 20px 10px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -234,7 +234,6 @@ main {
   grid-row: 1/1;
   top: 10%;
   color: #c8c8c8;
-  background-color: rgba(0, 0, 0, 0.3);
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
