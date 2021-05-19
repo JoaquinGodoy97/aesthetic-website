@@ -80,7 +80,7 @@ nav{
 
     // background: black;
     background-image: linear-gradient(rgba(86, 86, 87, 0.234) 100%, rgba(0,0,0,1) 100%);   
-    background-position: 50% 50%;
+    background-position: auto 50%;
     background-repeat: no-repeat;
     background-size: 0% 100%;
     transition: background-size .9s ease-in-out;
@@ -136,10 +136,10 @@ nav{
     height: 100vh;
 
     display: grid;
-    margin: auto;
-    grid-template-columns: repeat(3,1fr);
+    margin: 0 auto;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
     grid-template-rows: 1fr;
-
+    align-items: center;
     justify-content: center;
 
 }
@@ -154,16 +154,18 @@ main{
    Central Image
 */
 
-
-#eland{
-    grid-template: 2/3;
-    height: 500px;
-    width: 500px;
-    top: 15%;
-    right: 25%;
-    display: flex;
+.central-image-wrapper{
+    grid-row: 1/1;
+    width: 80%;
+    margin: 0 auto;
+    height: 100%;
     position: absolute;
-    align-items: center;
+    display: flex;
+    justify-content: center;
+
+}
+.central-image{
+    transform: scale(0.65);
 }
 
 
@@ -187,7 +189,8 @@ p{
     left: 0%;
     position: relative;
     display: flex;
-    background-color: rgba(0, 0, 0, 0.3);
+    // background-color: rgba(0, 0, 0, 0.3);
+    background-color: rgba(255, 235, 205, 0.300);
     box-shadow: 5px 5px 10px 0px rgb(9, 9, 9);
     border-radius: 5px;
 }
@@ -216,13 +219,11 @@ p{
 .title-slider{
 
     position: relative;
-    height: 18vh;
-    min-width: 50%;
-    max-width: 55%;
-
+    height: 15vh;
+    max-width: 400px;
     grid-column: 1/3;
     grid-row: 1/1;
-    top: 10%;
+    top: -30%;
     color: rgb(200, 200, 200);
     // background-color: rgba(0, 0, 0, 0.3);
     display: flex;
@@ -238,7 +239,10 @@ p{
     position: absolute;
     display: flex;
     // background-color: blanchedalmond;
+    max-width: 200px;
     overflow: hidden;
+    max-height: 15vh;
+
 }
 
 .slider-row-up{
@@ -254,17 +258,17 @@ p{
 }
 .text1, .text2{
 
-    animation: titleRightHiding 10s ease-in-out infinite;
+    animation: titleRightHiding 2s ease-in-out infinite;
 }
 .text3, .text4{
-    animation: titleLeftHiding 10s ease-in-out infinite;
+    animation: titleLeftHiding 2s ease-in-out infinite;
 }
 
 .inside-title{
-    font-size: 5vh;
+    font-size: 2rem;
 }
 .stick-effect{
-    height: 18vh;
+    height: 15vh;
     background-color: rgb(200, 200, 200);
     width: 1px;
 
@@ -306,12 +310,14 @@ p{
     transform: rotate(70deg) scale(2.5);
 }
 
-// second section
+// second section 
 
 .second-section{
     background-color: blanchedalmond;
     height: 100vh;
 }
+
+// second section blocs
 
 .bloc-container{
     display: flex;
@@ -325,6 +331,27 @@ p{
     height: 40vh;
     width: 300px;
     margin: 10px;
+    border-radius: 4px;
+}
+
+.bloc:hover{
+    animation: softRotationBloc 1s ease-out;
+    transition: animation 1s ease-out;
+}
+
+@keyframes softRotationBloc {
+    0%{
+        transform: rotate(0deg);
+    }80%{
+        transform: rotate(2deg);
+        
+    }90%{
+        transform: rotate(-2deg);
+        
+    }100%{
+        transform: rotate(0deg);
+    }
+
 }
 
 @keyframes navHide {
@@ -351,24 +378,24 @@ p{
     }
     30%{
         opacity: 1;
-        transform: translateX(0%);
+        transform: translateX(-100%);
     }
     40%{
-        transform: translateX(0%);
+        transform: translateX(-100%);
         opacity: 1;
     }
     50%{
-        transform: translateX(0%);
+        transform: translateX(-100%);
     }
     70%{
-        transform: translateX(190%);
+        transform: translateX(100%);
     }
     80%{
         opacity: 1;
     }
     90%{
         opacity: 1;
-        transform: translateX(190%);
+        transform: translateX(100%);
     }100%{
         opacity: 0;
         transform: translateX(300%);
@@ -394,14 +421,14 @@ p{
         transform: translateX(0%);
     }
     70%{
-        transform: translateX(-140%);
+        transform: translateX(-150%);
     }
     80%{
         opacity: 1;
     }
     90%{
         opacity: 1;
-        transform: translateX(-140%);
+        transform: translateX(-150%);
 
     }100%{
         opacity: 0;
@@ -468,7 +495,7 @@ p{
         position: absolute;
         top: 50%;
     }
-    #eland{
+    .central-image{
         opacity: 0;
     }
     #arrow{
@@ -478,21 +505,46 @@ p{
     .info-container{
         opacity: 0;
     }
+    .container{
+        width: 90%;
+    }
+    .title-slider{
+        width: 80%;
+        transform: scale(1.2);
+        align-items: center;
+    }
+
+    // Second section
     
+    .bloc-container{
+        align-items: center;
+        flex-direction: column;
+        height: 80%;
+    }
+
+    .bloc-container .bloc{
+        width: 50vw;
+
+    }
+    .second-section{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
 }
 
-@media screen and (max-width:1200px) {
-    .title-slider{
-        min-width: 60%;
-        max-width: 65%;
-    }
-}
-@media screen and (max-width:1025px) {
-    .title-slider{
-        min-width: 50%;
-        max-width: 90%;
-    }
-    .text1, .text3{
-        margin-right: 120px;
-    }
-}
+// @media screen and (max-width:1200px) {
+//     .title-slider{
+//         min-width: 60%;
+//         max-width: 65%;
+//     }
+// }
+// @media screen and (max-width:1025px) {
+//     .title-slider{
+//         min-width: 50%;
+//         max-width: 90%;
+//     }
+//     .text1, .text3{
+//         margin-right: 120px;
+//     }
+// }
