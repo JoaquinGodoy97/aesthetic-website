@@ -75,6 +75,7 @@ nav {
 }
 
 .listWrapper {
+  margin-top: 2vh;
   width: 90%;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -160,6 +161,18 @@ nav {
 
 .contact a {
   color: #c8c8c8;
+}
+
+.burger {
+  display: none;
+}
+
+.burger div {
+  width: 25px;
+  height: 5px;
+  background-color: #c8c8c8;
+  margin: 5px;
+  border-radius: 1.5px;
 }
 
 /* 
@@ -315,13 +328,13 @@ p {
 }
 
 .text1, .text2 {
-  -webkit-animation: titleRightHiding 2s ease-in-out infinite;
-          animation: titleRightHiding 2s ease-in-out infinite;
+  -webkit-animation: titleRightHiding 10s ease-in-out infinite;
+          animation: titleRightHiding 10s ease-in-out infinite;
 }
 
 .text3, .text4 {
-  -webkit-animation: titleLeftHiding 2s ease-in-out infinite;
-          animation: titleLeftHiding 2s ease-in-out infinite;
+  -webkit-animation: titleLeftHiding 10s ease-in-out infinite;
+          animation: titleLeftHiding 10s ease-in-out infinite;
 }
 
 .inside-title {
@@ -797,6 +810,48 @@ p {
     -webkit-box-pack: center;
         -ms-flex-pack: center;
             justify-content: center;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .nav-items {
+    position: absolute;
+    right: 10%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+  .nav-items a {
+    font-size: 12pt;
+  }
+  .logo {
+    font-size: 18pt;
+  }
+  .navList {
+    width: 80%;
+  }
+  .listWrapper {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .burger {
+    display: block;
+    position: absolute;
+  }
+  .central-image {
+    z-index: 4;
+  }
+  .title-slider {
+    z-index: 1;
+  }
+  .container {
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
   }
 }
 /*# sourceMappingURL=style.css.map */

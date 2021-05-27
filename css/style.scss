@@ -52,6 +52,7 @@ nav{
 }
 
 .listWrapper{
+    margin-top: 2vh;
     width: 90%;
     display: flex;
     justify-content: space-between;
@@ -124,7 +125,17 @@ nav{
 
     }
 }
+.burger{
+    display: none;
+}
 
+.burger div{
+    width: 25px;
+    height: 5px;
+    background-color: rgb(200, 200, 200);
+    margin: 5px;
+    border-radius: 1.5px;
+}
 
 
 /* 
@@ -232,9 +243,6 @@ p{
     overflow: hidden;
 }   
 
-
-
-
 .slider-row-up, .slider-row-down{
     position: absolute;
     display: flex;
@@ -258,10 +266,10 @@ p{
 }
 .text1, .text2{
 
-    animation: titleRightHiding 2s ease-in-out infinite;
+    animation: titleRightHiding 10s ease-in-out infinite;
 }
 .text3, .text4{
-    animation: titleLeftHiding 2s ease-in-out infinite;
+    animation: titleLeftHiding 10s ease-in-out infinite;
 }
 
 .inside-title{
@@ -548,3 +556,42 @@ p{
 //         margin-right: 120px;
 //     }
 // }
+
+@media screen and (max-width: 768px){
+    .nav-items{
+        position: absolute;
+        right: 10%;
+        display: flex;
+    }
+    .nav-items a{
+        font-size: 12pt;
+    }
+    .logo{
+        font-size: 18pt;
+    }
+    .contact{
+    }
+    .navList{
+        width: 80%;
+    }
+    .listWrapper{
+        justify-content: center;
+        align-items: center;
+    }
+
+    .burger{
+        display: block;
+        position: absolute;
+    }
+
+    .central-image{
+        z-index: 4;
+    }
+    .title-slider{
+        z-index: 1;
+    }
+    .container{
+        align-items: center;
+    }
+  
+}
