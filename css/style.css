@@ -815,22 +815,46 @@ p {
 
 @media screen and (max-width: 768px) {
   .nav-items {
-    position: absolute;
-    right: 10%;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
+    margin-bottom: 10vh;
+  }
+  .hid-items, .hid-items {
+    opacity: 0;
   }
   .nav-items a {
     font-size: 12pt;
   }
   .logo {
     font-size: 18pt;
+    padding: 0;
+    width: 0;
   }
   .navList {
-    width: 80%;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: reverse;
+        -ms-flex-direction: column-reverse;
+            flex-direction: column-reverse;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    width: 0%;
   }
   .listWrapper {
+    width: 70%;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+    height: 5vh;
+    margin: 0;
+  }
+  nav {
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .nav-elements {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
     -webkit-box-pack: center;
         -ms-flex-pack: center;
             justify-content: center;
@@ -840,7 +864,7 @@ p {
   }
   .burger {
     display: block;
-    position: absolute;
+    cursor: pointer;
   }
   .central-image {
     z-index: 4;
@@ -852,6 +876,8 @@ p {
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
   }
 }
 /*# sourceMappingURL=style.css.map */

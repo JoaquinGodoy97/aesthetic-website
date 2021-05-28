@@ -49,3 +49,19 @@ about.addEventListener('click', function(){
 home.addEventListener('click', function(){
         smoothScroll('.container', 1000);
 });
+
+// const burger = document.getElementById('burger');
+// const homeItem = document.getElementById('homeItem');
+// const aboutItem = document.getElementById('aboutItem');
+const hiddenItems = document.querySelector(".hid-items");
+
+burger.addEventListener('click', function(){
+        if(!burger.classList.contains("active")){
+                gsap.fromTo('.hid-items', {x: 100, opacity: 0, stagger: .1}, {x: 0, opacity: 1, stagger: .1});
+                burger.classList.add("active");
+        } else {
+                gsap.fromTo('.hid-items', {x: 0, opacity: 1, stagger: .1}, {x: 100, opacity: 0, stagger: .1});
+                burger.classList.remove("active");
+        }
+      
+})
