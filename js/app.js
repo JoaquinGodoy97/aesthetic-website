@@ -50,12 +50,13 @@ home.addEventListener('click', function(){
         smoothScroll('.container', 1000);
 });
 
-// const burger = document.getElementById('burger');
+const burgers = document.querySelectorAll('.burger');
 // const homeItem = document.getElementById('homeItem');
 // const aboutItem = document.getElementById('aboutItem');
 const hiddenItems = document.querySelector(".hid-items");
 
 burger.addEventListener('click', function(){
+        "use strict"
         if(!burger.classList.contains("active")){
                 gsap.fromTo('.hid-items', {x: 100, opacity: 0, stagger: .1}, {x: 0, opacity: 1, stagger: .1});
                 burger.classList.add("active");
@@ -65,3 +66,17 @@ burger.addEventListener('click', function(){
         }
       
 })
+
+const secondSection = document.querySelector('.second-section');
+const logo = document.getElementById('logo');
+
+window.onscroll = function () { 
+        "use strict"
+        if (window.scrollY > 700) {
+                logo.style.color = "black";
+
+        } 
+        else {
+               logo.style.color = "white";
+        }
+    };
