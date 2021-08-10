@@ -7,6 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Portfolio</title>
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/style.css">
 
 </head>
 
@@ -14,21 +15,25 @@
    
     <header>
         <nav>
-            <span class="logo" href="">
-                <h1>Home</h1>
-            </span>
-            
-            <div id="menu" class="menu">
-                <a href="#">
-                    MENU
-                </a>
+            <div class="fixed-menu-container">
+                <span class="logo" href="">
+                    <h1>Home</h1>
+                </span>
+                
+                <div id="menu" class="menu">
+                    <a href="#">
+                        MENU
+                    </a>
+                </div>
             </div>
+            <div class="fixed-menu"></div>
             <ul class="nav-list nav-open nav-close">
                 <li class="nav-item close-btn"><a class="menu menu-x" id="menu-x" href="#">X</a></li>
                 <li class="nav-item underline"><a href="#">Home</a></li>
                 <li class="nav-item underline"><a href="#">About</a></li>
                 <li class="nav-item underline"><a href="#">Contact</a></li>
             </ul>
+            
         </nav>
     
     </header>
@@ -38,15 +43,15 @@
 
         <div class="bg bg-props" id="home-shape-1"></div>
 
-        <div class="home-card-position card-prop home-card" id="home-card">
+        <div class="home-card-position card-prop card" id="home-card">
             <div class="top-card-container">
                 <p class="card-main-text">
-                   Mi nombre es <span style="font-size: 1.5rem; font-weight: bold;">Joaquin Godoy</span> soy un programador especializado
+                   Mi nombre es <span style="font-size: .9em; font-weight: bold;">Joaquin Godoy</span> soy un programador especializado
                    en front-end. Actualmente me dedico a la programacion como algo secundario, aunque me gustaria poder trabajar de esto.
                 </p>
             </div>
             <div class="bottom-card-container">
-                <span><i>date 1-2-19</i></span>
+                <span class="card-date"><i>date 1-2-19</i></span>
                 <div>
                     <a href="">Ultimo Projecto</a>
                 </div>
@@ -62,7 +67,24 @@
 
     <section>
         <div id="programming-img" class="upper-img"></div>
+        <div class="bg bg-props bg-about"></div>
 
+        <div class="card-prop card cards-about">
+            <div>
+                <div class="card-img"></div>
+            </div>
+            <div class="card-main-text">
+                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Aperiam architecto aut magnam. Obcaecati, eveniet earum. Debitis quibusdam asperiores blanditiis officia, architecto quas facere nesciunt sequi.</p>
+            </div>
+            <div>
+                <div class="bottom-card-container">
+                    <span class="card-date">date 1-2-19</span>
+                    <div>
+                        <a href="">Projecto</a>
+                    </div>
+                </div>
+            </div>
+        </div>
     </section>
     
     <!-- <div class="curtain">
@@ -104,6 +126,7 @@
 
     menu.addEventListener('click', function(){
         navList.classList.toggle('nav-close');
+        menu.classList.toggle('hide-menu')
     });
 
     // nav-list x-btn
@@ -111,17 +134,19 @@
         navList.classList.toggle('nav-close');
     })
 
-    
 
     window.addEventListener('scroll', function(){
         value = window.scrollY;
         
         let fontBg = document.getElementById('ff-bg-selector');
         let homeCard = document.getElementById('home-card');
+        let programmingImg = document.getElementById('programming-img')
         
+        programmingImg.style.transform = `translateY(${value * -.1 + "px"})`;
         fontBg.style.top = value * 0.1 + "px";
         homeCard.style.transform = `translateY(${2 - value * 0.1 + "%"})`;
 
+        
     })
 
 

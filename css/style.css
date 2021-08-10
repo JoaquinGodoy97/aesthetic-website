@@ -48,7 +48,7 @@ body{
 /* NAV BAR */
 
 header nav{
-    width: 90%;
+    width: 100%;
     margin: 0 auto;
     padding: 20px 0;
 
@@ -56,7 +56,8 @@ header nav{
     justify-content: space-between;
     overflow: hidden;
     /* background-color: red; */
-    position: relative;
+    position: fixed;
+    z-index: 999;
 }
 
 
@@ -71,7 +72,7 @@ header nav{
 
 .menu{
 
-    transform: translateX(0%);
+    /* transform: translateX(0%); */
     transition: 
     transform .8s ease-in-out;
 
@@ -89,6 +90,18 @@ header nav{
     color: var(--ff-primary-clr);
 }
 
+.fixed-menu-container{
+    width: 90%;
+    display: flex;
+    justify-content: space-between;
+    margin: 0 auto;
+}
+
+.fixed-menu-bg{
+    height: 10vh;
+    background-color: black;
+}
+
 .nav-list{
     font-family: var(--ff-family);
 
@@ -99,7 +112,6 @@ header nav{
 
     top: 0;
     width: 50%;
-
 }
 
 
@@ -119,6 +131,11 @@ header nav{
 }
 
 /* CLOSING BUTTON */
+
+.hide-menu{
+    /* display: none; */
+}
+
 
 .menu-x{
     padding: 5px 10px;
@@ -198,7 +215,7 @@ header nav{
     background-repeat: no-repeat;
 }
 #home-shape-1{
-    background-image: url(../backgroundhomebelow.png);
+    background-image: url(../upper-home-bg.png);
     top: -20%;
 
     z-index: -3;
@@ -209,8 +226,9 @@ header nav{
 }
 
 #home-shape-2{
-    background-image: url(../backgroundhomebelow.png);
+    background-image: url(../bottom-home-bg.png);
     bottom: -40%;
+    overflow-y: hidden;
 
     z-index: -2;
 }
@@ -227,23 +245,20 @@ header nav{
     z-index: -3;
 }
 
+/* SECTION II BGS */
 .upper-img{
-    background-color: blue;
     width: 100%;
     height: 40vh;
     background-image: url(../programmingdesk.jpeg);
     background-size: 100% !important;
-    transform: translateY(20%);
     z-index: -4;
+
+    position: absolute;
+    top: 20%;
 }
 
-/* SECTION II BACKGROUND IMAGE */
 
-#programming-img{
-
-}
-
-/* MAIN TEXT HOME - SECTION 1 */
+/* MAIN TEXT HOME - SECTION HOME */
 
 section{
     display: grid;
@@ -263,14 +278,14 @@ section{
 
     background-color: var(--card-clr) !important;
     color: var(--ff-seconday-clr);
-    opacity: 80%;
+    opacity: 90%;
 
     box-shadow:
     0 2px 8px 0 rgba(0, 0, 0, 0.9),
     0 1px 2px .1px rgba(0, 0, 0, 1)
 }
 
-.home-card{
+.card{
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -282,12 +297,12 @@ section{
     bottom: 0;
     position: absolute;
 
-    height: 40vh;
+    height: minmax(vh, 40vh);
     width: 100%;
     margin: 0 auto;
     background-color: rgba(197, 150, 150, 0.152);
     
-    line-height: 30px;
+    /* line-height: 30px; */
     
 }
 
@@ -299,9 +314,9 @@ section{
 }
 
 .card-main-text{
-    /* margin: 0 auto; */
-    font-size: 1.4rem;
+    font-size: 1.24rem;
     font-weight: 300;
+    padding-bottom: 20px;
 }
 
 .bottom-card-container{
@@ -309,4 +324,29 @@ section{
     justify-content: space-between;
 }
 
-/* SECTION */   
+/* SECTION II BACKGROUND IMAGE */
+
+.bg-about{
+    
+    background-image: url(../about-shaped-bg.png);
+    /* background-color: blue; */
+    height: 100%;
+    position: absolute;
+    /* background-color: blue; */
+    transform: translateY(20%);
+}
+
+/* CARDS SECTION II */
+
+.cards-about{
+    grid-row: 2/2;
+    height: minmax(45vh, 40vh);
+    margin: auto 20px;
+
+    border-radius: 20px;
+}
+
+.cards-about p{
+    font-size: .9em;
+}
+
