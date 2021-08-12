@@ -8,6 +8,7 @@
     <title>Portfolio</title>
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/style.css">
+    <script src="https://kit.fontawesome.com/e9281aa1fb.js" crossorigin="anonymous"></script>
 
 </head>
 
@@ -16,19 +17,19 @@
     <header>
         <nav>
             <div class="fixed-menu-container">
-                <span class="logo" href="">
+                <span class="logo" id="logo" href="">
                     <h1>Home</h1>
                 </span>
                 
                 <div id="menu" class="menu">
-                    <a href="#">
+                    <a href="javascript:void(0)">
                         MENU
                     </a>
                 </div>
             </div>
             <div class="fixed-menu"></div>
             <ul class="nav-list nav-open nav-close">
-                <li class="nav-item close-btn"><a class="menu menu-x" id="menu-x" href="#">X</a></li>
+                <li class="nav-item close-btn"><a class="menu menu-x" id="menu-x" href="javascript:void(0)">X</a></li>
                 <li class="nav-item underline"><a href="#">Home</a></li>
                 <li class="nav-item underline"><a href="#">About</a></li>
                 <li class="nav-item underline"><a href="#">Contact</a></li>
@@ -69,22 +70,95 @@
         <div id="programming-img" class="upper-img"></div>
         <div class="bg bg-props bg-about"></div>
 
-        <div class="card-prop card cards-about">
-            <div>
-                <div class="card-img"></div>
-            </div>
-            <div class="card-main-text">
-                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Aperiam architecto aut magnam. Obcaecati, eveniet earum. Debitis quibusdam asperiores blanditiis officia, architecto quas facere nesciunt sequi.</p>
-            </div>
-            <div>
-                <div class="bottom-card-container">
-                    <span class="card-date">date 1-2-19</span>
-                    <div>
-                        <a href="">Projecto</a>
+        <!-- <div class="carrousel-card-container slider" id="carrousel-card-container"> -->
+
+            <!-- <div class="card-prop card cards-about" id="card-about-1">
+                <div class="card-img">
+                    <img src="./javascript-logo.png" alt="js">
+                </div>
+                <div class="card-main-text">
+                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Aperiam architecto aut magnam. Obcaecati, eveniet earum. Debitis quibusdam asperiores blanditiis officia, architecto quas facere nesciunt sequi.</p>
+                </div>
+                <div>
+                    <div class="bottom-card-container">
+                        <span class="card-date">date 1-2-19</span>
+                        <div>
+                            <a href="">Projecto</a>
+                        </div>
                     </div>
                 </div>
-            </div>
-        </div>
+            </div> -->
+
+            <div class="slider" id="slider">
+                <div class="slide-icon">
+                    <i class="fas fa-angle-right"></i>
+                </div>
+                <div class="slide" id="slide-1">
+                    <div class="card-prop card cards-about" id="card-about-1">
+                        <div class="card-img">
+                            <img src="./javascript-logo.png" alt="js">
+                        </div>
+                        <div class="card-main-text">
+                            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Aperiam architecto aut magnam. Obcaecati, eveniet earum. Debitis quibusdam asperiores blanditiis officia, architecto quas facere nesciunt sequi.</p>
+                        </div>
+                        <div>
+                            <div class="bottom-card-container">
+                                <span class="card-date">date 1-2-19</span>
+                                <div>
+                                    <a href="">Projecto</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="slide" id="slide-2">
+                    <div class="card-prop card cards-about" id="card-about-4">
+                        <div class="card-img">
+                            <img src="./javascript-logo.png" alt="js">
+                        </div>
+                        <div class="card-main-text">
+                            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Aperiam architecto aut magnam. Obcaecati, eveniet earum. Debitis quibusdam asperiores blanditiis officia, architecto quas facere nesciunt sequi.</p>
+                        </div>
+                        <div>
+                            <div class="bottom-card-container">
+                                <span class="card-date">date 1-2-19</span>
+                                <div>
+                                    <a href="">Projecto</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="slide" id="slide-3">
+                    <div class="card-prop card cards-about" id="card-about-4">
+                        <div class="card-img">
+                            <img src="./javascript-logo.png" alt="js">
+                        </div>
+                        <div class="card-main-text">
+                            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Aperiam architecto aut magnam. Obcaecati, eveniet earum. Debitis quibusdam asperiores blanditiis officia, architecto quas facere nesciunt sequi.</p>
+                        </div>
+                        <div>
+                            <div class="bottom-card-container">
+                                <span class="card-date">date 1-2-19</span>
+                                <div>
+                                    <a href="">Projecto</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+              </div>
+
+            <!--  -->
+
+            
+        <!-- </div> -->
+        
+
+
     </section>
     
     <!-- <div class="curtain">
@@ -120,13 +194,12 @@
     </div> -->
 
 <script>
-    let menu = document.getElementById("menu");
+    let menu = document.getElementById('menu');
     let navList = document.querySelector('.nav-list')
     let menuX = document.querySelector('#menu-x');
-
+    let carrousel = document.querySelector('#carrousel-card-container');
     menu.addEventListener('click', function(){
         navList.classList.toggle('nav-close');
-        menu.classList.toggle('hide-menu')
     });
 
     // nav-list x-btn
@@ -134,23 +207,59 @@
         navList.classList.toggle('nav-close');
     })
 
+    let card1 = document.querySelector('#card-about-1');
+    let card2 = document.querySelector('card-about-2');
+    let card3 = document.querySelector('#card-about-3');
 
-    window.addEventListener('scroll', function(){
-        value = window.scrollY;
-        
-        let fontBg = document.getElementById('ff-bg-selector');
-        let homeCard = document.getElementById('home-card');
-        let programmingImg = document.getElementById('programming-img')
-        
-        programmingImg.style.transform = `translateY(${value * -.1 + "px"})`;
-        fontBg.style.top = value * 0.1 + "px";
-        homeCard.style.transform = `translateY(${2 - value * 0.1 + "%"})`;
-
+    carrousel.addEventListener('click', function(){
         
     })
 
 
+    window.addEventListener('scroll', function(e){
+        valueScrollY = window.scrollY;
+        
+        let fontBg = document.querySelector('#ff-bg-selector');
+        let homeCard = document.querySelector('#home-card');
+        let programmingImg = document.querySelector('#programming-img')
+        
+        programmingImg.style.transform = `translateY(${valueScrollY * -.1 + "px"})`;
+        fontBg.style.top = valueScrollY * 0.1 + "px";
+        homeCard.style.transform = `translateY(${2 - valueScrollY * 0.1 + "%"})`;
+
+        let logo = document.querySelector('#logo');
+        
+        // function gradualOpacity(element, opacity){
+        
+        function gradualFading(element, height){
+            let scroll = window.pageYOffset || document.documentElement.scrollTop || document.body.scrollTop || 0;
+            element.style.opacity = Math.max(0, Math.min(1, -scroll / height + 2))
+        }
+
+        gradualFading(logo, 100);
+
+        let slideIcon = document.querySelector('.slide-icon .fas');
+        let slider = document.querySelector('#slider');
+        let valueScrollLeft = slider.getBoundingClientRect().left;
+        let slide = document.querySelector('.slide');
+
+        setTimeout(function(){
+        location.reload();
+        }, 3000);
+        if (valueScrolLeft > 0){
+            slideIcon.classList.add('hide-opacity');
+        } 
+         else {
+            slideIcon.classList.remove('hide-opacity');
+            
+        }
+        
+
+    })
+
+
 </script>
+
 <script src="floatingText.js"></script>
 <script src="app.js"></script>
 <script type="text/javascript" src="nombre.js"></script>
