@@ -90,16 +90,19 @@
             </div> -->
 
             <div class="slider" id="slider">
-                <div class="slide-icon">
-                    <i class="fas fa-angle-right"></i>
-                </div>
+                
                 <div class="slide" id="slide-1">
+                    
                     <div class="card-prop card cards-about" id="card-about-1">
+                        
                         <div class="card-img">
                             <img src="./javascript-logo.png" alt="js">
                         </div>
                         <div class="card-main-text">
                             <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Aperiam architecto aut magnam. Obcaecati, eveniet earum. Debitis quibusdam asperiores blanditiis officia, architecto quas facere nesciunt sequi.</p>
+                            <div class="slide-icon">
+                                <i class="fas fa-angle-right"></i>
+                                </div>
                         </div>
                         <div>
                             <div class="bottom-card-container">
@@ -208,15 +211,15 @@
     })
 
     let card1 = document.querySelector('#card-about-1');
-    let card2 = document.querySelector('card-about-2');
+    let card2 = document.querySelector('#card-about-2');
     let card3 = document.querySelector('#card-about-3');
 
-    carrousel.addEventListener('click', function(){
+    // carrousel.addEventListener('click', function(){
         
-    })
+    // })
 
 
-    window.addEventListener('scroll', function(e){
+    window.addEventListener('scroll', function(){
         valueScrollY = window.scrollY;
         
         let fontBg = document.querySelector('#ff-bg-selector');
@@ -239,22 +242,20 @@
         gradualFading(logo, 100);
 
         let slideIcon = document.querySelector('.slide-icon .fas');
-        let slider = document.querySelector('#slider');
+        let slider = document.querySelector('.slider');
         let valueScrollLeft = slider.getBoundingClientRect().left;
-        let slide = document.querySelector('.slide');
+        // let slide = document.querySelector('.slide');
 
-        setTimeout(function(){
-        location.reload();
-        }, 3000);
-        if (valueScrolLeft > 0){
+        // setTimeout(function(){
+        // location.reload();
+        // }, 3000);
+        if (valueScrollLeft > 0){
             slideIcon.classList.add('hide-opacity');
         } 
          else {
             slideIcon.classList.remove('hide-opacity');
-            
         }
         
-
     })
 
 

@@ -391,6 +391,7 @@ section{
     padding-top: 10vh;
     padding-bottom: 2vh;
     position: relative;
+
 }
   
   .slide {
@@ -398,14 +399,16 @@ section{
     flex-shrink: 0;
     height: minmax(100%, auto);
     /* transform: translateY(0%); */
+
 }
 
 .slide-icon .fa-angle-right{    
     position: absolute;
     font-size: 5em;
-    z-index: 999;
+    /* z-index: 9999; */
     cursor: pointer;
-    right: 8%;
+    right: -10%;
+    top: 30%;
     color: var(--ff-seconday-clr);
     animation: animacionArrow 2s infinite;
 }
@@ -437,12 +440,11 @@ section{
 }
 
 @keyframes animacionArrow{
-
     0%{
         transform: scale(1);
     } 50% {
         transform: scale(1.1);
     } 100% {
-        transform: scale(1)
+        transform: scale(1);
     }
 }
